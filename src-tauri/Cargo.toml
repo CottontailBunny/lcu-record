@@ -23,7 +23,7 @@ sysinfo = "0.28.0"
 base64 = "0.21.0"
 lazy_static = "1.4.0"
 chrono = "0.4.24"
-# psutil = "3.2.2"
+
 
 [features]
 # this feature is used for production builds or when `devPath` points to the filesystem

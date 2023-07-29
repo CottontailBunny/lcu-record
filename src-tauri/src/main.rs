@@ -16,7 +16,6 @@ mod by_lcu;
 
 // 声明 win_utils 的模块。在同一目录下，名为 win_utils.rs 或者 win_utils/mod.rs 的文件
 fn main() {
-    println!("fsdfsdf");
     tauri::Builder::default()
         .invoke_handler(tauri::generate_handler![
             greet,

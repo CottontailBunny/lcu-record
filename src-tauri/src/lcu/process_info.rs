@@ -53,8 +53,6 @@ pub(crate) fn get_auth_info() -> Result<(String, String), ProcessInfoError> {
         .map(|p: &sysinfo::Process| p.cmd())
         .ok_or(ProcessInfoError::ProcessNotAvailable)?;
 
-   
- 
     let port = args
         .iter()
         .find(|arg| arg.starts_with("--app-port="))

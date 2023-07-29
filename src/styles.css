@@ -1,20 +1,3 @@
-
-
-.container {
-  margin: 0;
-
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  text-align: center;
-}
-
-
-
-@tailwind base;
-@tailwind components;
-@tailwind utilities;
-
 @font-face {
   font-family: "DingTalk";
   src: url("assets/font/DingTalk JinBuTi.ttf");
@@ -53,10 +36,16 @@ span,p,div {
 }
 .err-type{
   display: flex;
-margin-top: 300px;
-font-size: 18px;
+  margin-top: 300px;
+  font-size: 18px;
 }
-
+.container {
+  margin: 0;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  text-align: center;
+}
 
 
 
