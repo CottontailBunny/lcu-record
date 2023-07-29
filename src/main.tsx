@@ -18,7 +18,11 @@ invoke("is_lcu_success").then((isSuc) => {
 			document.getElementById("root") as HTMLElement
 		).render(
 			<React.StrictMode>
-				<div className='err-type'>请先启动游戏再打开此软件</div>
+				<div className='err-type'>
+					请先启动游戏再打开此软件
+					<br />
+					请右键菜单选择【以管理员身份运行】
+				</div>
 			</React.StrictMode>
 		);
 	}
