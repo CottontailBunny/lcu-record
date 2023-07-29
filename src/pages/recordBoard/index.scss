@@ -1,0 +1,24 @@
+.queryMatch{
+    background-color: #fff;
+    width: 100%;
+    margin-top: 15px;
+    border-radius: 12px;
+    padding: 8px 8px 0 8px;
+    box-sizing: border-box;
+    box-shadow:  26px 26px 51px #d6d6d6,
+             -26px -26px 51px #ffffff;
+    border: 1px solid #CADBE9;
+
+}
+.ant-form{
+    display: flex;
+    justify-content: space-between;
+    .ant-form-item-explain-error{
+        text-align: left;
+        padding-bottom: 6px;
+        padding-left: 4px;
+    }
+}
+.ant-form-item{
+    margin-bottom: 10px;
+}

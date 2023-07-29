@@ -1,0 +1,16 @@
+.header-area{
+    padding: 10px 0;
+    border: 1px solid red;
+
+}
+.minimize-icon{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 18px;
+    height: 18px;
+    border-radius: 8px;
+    background-color: #C0DEFF;
+    color: blue;
+    font-weight: bold;
+}

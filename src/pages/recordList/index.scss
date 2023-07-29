@@ -1,0 +1,75 @@
+.record-list-container{
+   position: relative;
+    width: 350px;
+    background-color: #fff;
+    border-radius: 12px;
+    margin-top: 12px;
+    padding: 12px 8px;
+    min-height: 600px;
+    .top-box{
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+    }
+    .copy-record{
+        text-align: left;
+        margin-left: 4px;
+        margin-bottom: 5px;
+        color: #30A9DE;
+        text-decoration-line:underline;
+        cursor: pointer;
+    }
+    .ant-pagination{
+        position: absolute;
+        padding-top: 5px;
+        bottom: 4px;
+    }
+    .empty-wrap{
+        display: flex;
+        justify-content: center;
+        margin-top: 80px;
+    }
+}
+.record-item{
+    font-size: 16px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    height: 50px;
+    width: 100%;
+    background: linear-gradient(to right, #ffffff, #60c5ba);
+    margin-bottom: 8px;
+    padding: 0 8px;
+    box-sizing: border-box;
+    .left-box{
+        display: flex;
+    }
+    .center-text{
+        display: flex;
+        flex-direction: column;
+        justify-content: space-around;
+        align-items: flex-start;
+        margin-left: 8px;
+        .top-line{
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            text-align: center;
+            
+        }
+        .date{
+            font-size: 12px;
+            text-align: center;
+            margin-left: 4px;
+           
+
+           
+        }
+        .kda{
+            font-size: 16px;
+        }
+    }
+}
+.fail{
+    background: linear-gradient(to right, #ffffff, #ff7473);
+}
