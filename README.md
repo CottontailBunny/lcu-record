@@ -7,9 +7,16 @@ lcu提供的api很多，能做的好玩的东西也很多，很多线上提供�
 之后有时间再迭代【下次一定】
 
 
+调用的第三方接口并不是我在维护，某些大区在某些时间段可能会挂掉查不到战绩（可以试试用其他工具也是查不到的），可以换时间试试
+
+
+
+
 ### 参考文档
 https://hextechdocs.dev/getting-started-with-the-riot-games-api/
+
 https://riot-api-libraries.readthedocs.io/en/latest/lcu.html#lcu-explorer
+
 https://lcu.vivide.re/
 
 ### 参考源码

@@ -62,7 +62,12 @@ export default function ({ matchList, onPageChange }: Props) {
 				</>
 			) : (
 				<>
-					<div className='empty-wrap'>暂无数据(,,◕ ⋏ ◕,,)</div>
+					<div className='empty-wrap'>
+						暂无数据(,,◕ ⋏ ◕,,)
+						<br />
+						<br />
+						【也可能是接口服务不稳定造成数据丢失哦】
+					</div>
 				</>
 			)}
 			<Pagination
