@@ -35,8 +35,13 @@ span,p,div {
   align-items: center;
 }
 .err-type{
+  position: absolute;
   display: flex;
-  margin-top: 300px;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  height: 100%;
+ 
   font-size: 18px;
 }
 .container {

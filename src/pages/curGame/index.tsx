@@ -1,7 +1,7 @@
 // 查询本局战绩
 import "./index.scss";
 import { getGame, sendMsg } from "../../utils/gameFlow";
-import { Image, Tag } from "antd";
+import { Image } from "antd";
 import copy from "copy-to-clipboard";
 import { useState, useEffect } from "react";
 import noneImg from "../img/none.jpg";
@@ -77,7 +77,7 @@ export default function (props: Props) {
 	};
 
 	const formatText = (item: Players) => {
-		const { summonerInfo, matchList, kda } = item;
+		const { summonerInfo, matchList } = item;
 		const { displayName } = summonerInfo;
 		let record = "近期战绩：";
 		matchList.slice(0, 5).forEach((el) => {

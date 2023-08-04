@@ -9,7 +9,7 @@ export const getAllSummonersId = async () => {
 	let summonerIdList: number[] = [];
 	if (chatInfo && chatInfo.length > 0) {
 		let chat_id = "";
-		chatInfo.map((item) => {
+		chatInfo.map((item: any) => {
 			if (item.type === "championSelect") {
 				chat_id = item.id;
 			}
@@ -35,10 +35,10 @@ export const sendMsg = async (message: string) => {
 		body: message,
 		type: "chat",
 	};
-	const chatList = await invoke("get_chat_info");
+	const chatList: any = await invoke("get_chat_info");
 	if (chatList && chatList.length > 0) {
 		let chat_id = "";
-		chatList.map((item) => {
+		chatList.map((item: any) => {
 			if (item.type === "championSelect") {
 				chat_id = item.id;
 			}
@@ -53,7 +53,7 @@ export const getAllSummonersInfo = async (queueId?: number) => {
 	const summonerIdList = await getAllSummonersId();
 
 	const allSummonerInfo: any = {};
-	const summonerList = [];
+	const summonerList: any = [];
 	summonerIdList.map((item) => {
 		summonerList.push({
 			summonerId: item,

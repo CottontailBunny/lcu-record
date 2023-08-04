@@ -119,23 +119,6 @@ interface GameDatas {
 	teamTwo: TeamMember[];
 }
 
-interface GameDodge {
-	dodgeIds: any[];
-	phase: string;
-	state: string;
-}
-
 interface GameMap {
 	// Define map properties here...
-}
-
-interface GamePhase {
-	// Define game phase properties here...
-}
-
-interface GameInfo {
-	type: GameData;
-	gameDodge: GameDodge;
-	gameMap: GameMap;
-	phase: GamePhase;
 }

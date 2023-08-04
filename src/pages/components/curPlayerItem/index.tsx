@@ -1,16 +1,16 @@
 import { Players } from "../../curGame";
 import { getImgUrl } from "../../../utils/methods";
-import { Image, Tag } from "antd";
+import { Image } from "antd";
 import "./index.scss";
 interface Props {
 	item: Players;
-	index: number;
+	index?: number;
 	onSearch: (name: string) => void;
 	sendTo: (item: Players) => void;
 	formatText: (item: Players) => void;
 }
 export default function (props: Props) {
-	const { item, index, onSearch, sendTo, formatText } = props;
+	const { item, onSearch, sendTo, formatText } = props;
 	const { summonerInfo, rankPoint, champId } = item;
 	return (
 		<div className='player-item'>
