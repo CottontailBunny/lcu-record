@@ -178,6 +178,7 @@ pub struct MatchList {
     assists: i64,
     matchTime: String,
     gameModel: String,
+    queue_id:i64,
 }
 
 impl MatchStruct {
@@ -202,7 +203,8 @@ impl MatchStruct {
                     // 游戏时间
                     matchTime: format_timestamp(game.gameCreation),
                     // 游戏模式
-                    gameModel:query_game_type(queue_id)
+                    gameModel:query_game_type(queue_id),
+                    queue_id
                 };
                 match_vec.push(match_list);
             }
@@ -222,6 +224,9 @@ impl MatchStruct {
 }
 
 
+
+
+
 fn query_game_type(queue_id:i64) -> String{
     match queue_id {
         420 => "单双排位".to_string(),
@@ -236,3 +241,6 @@ fn format_timestamp(timestamp:i64) ->String{
     let dt = Utc.timestamp_millis_opt(timestamp);
     dt.unwrap().format("%m-%d").to_string()
 }
+
+
+

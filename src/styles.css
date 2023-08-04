@@ -5,7 +5,7 @@
 
 :root {
   font-size: 16px;
-  background: #f5f5f5;
+  background-color: rgb(240, 240, 240);
 }
 ::-webkit-scrollbar {
   width: 0;

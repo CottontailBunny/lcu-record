@@ -21,4 +21,14 @@
 }
 .ant-form-item{
     margin-bottom: 10px;
+    input{
+        width: 100%;
+    }
+ 
+}
+.record-board{
+    display: flex;
+    .left-area{
+        width: 305px;
+    }
 }

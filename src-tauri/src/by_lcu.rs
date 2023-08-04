@@ -96,3 +96,40 @@ pub async fn get_special_match(puuid:String,queue_id:i64) -> Result<Vec<MatchLis
     };
     Ok(match_vec)
 }
+
+
+// 获取聊天室信息
+#[command]
+pub async fn get_chat_info() -> Result<Value, String> {
+    let client = &*REST_CLIENT;
+    let url = format!("/lol-chat/v1/conversations").to_string();
+    let res =  client.get(url).await.unwrap();
+    Ok(res)
+  } 
+
+// 查询当前会话（非游戏中会话
+#[command]
+pub async fn query_all_summoners (chatId:String) -> Result<Value, String> {
+    let client = &*REST_CLIENT;
+    let url = format!("/lol-chat/v1/conversations/{}/messages",chatId).to_string();
+    let res =  client.get(url).await.unwrap();
+    Ok(res)
+}
+
+#[command]
+pub async fn send_msg_to (chatId:String,params:String) -> Result<Value, String> {
+    let client = &*REST_CLIENT;
+    let url = format!("/lol-chat/v1/conversations/{}/messages",chatId).to_string();
+    let res =  client.post(url,params).await.unwrap();
+    Ok(res)
+}
+
+// 查询当前对局信息
+#[command]
+pub async fn get_game_session () -> Result<Value, String> {
+    let client = &*REST_CLIENT;
+    let url = format!("/lol-gameflow/v1/session").to_string();
+    let res =  client.get(url).await.unwrap();
+    Ok(res)
+  }
+

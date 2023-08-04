@@ -28,6 +28,10 @@ fn main() {
             by_lcu::get_match_list,
             by_lcu::get_match_detail,
             by_lcu::get_special_match,
+            by_lcu:: get_chat_info,
+            by_lcu::query_all_summoners,
+            by_lcu::get_game_session,
+            by_lcu::send_msg_to,
             ])
         .run(tauri::generate_context!())
         .expect("error while running tauri application");

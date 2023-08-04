@@ -75,6 +75,7 @@ export default function ({ matchList, onPageChange }: Props) {
 				total={99}
 				onChange={pageChange}
 				current={current}
+				showSizeChanger={false}
 			/>
 		</div>
 	);

@@ -216,6 +216,7 @@ export interface MatchList {
 	gameModel: string;
 	kda: string;
 	role: string;
+	queueId: number;
 }
 
 export interface simpleMatchTypes {

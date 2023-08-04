@@ -40,6 +40,7 @@ const getSimpleMatch = (match: Game, gameModel: string): MatchList => {
 		kda: `${match.participants[0].stats.kills}/${match.participants[0].stats.deaths}/${match.participants[0].stats.assists}`,
 		gameModel: gameModel,
 		role: champDict[match.participants[0].championId].label,
+		queueId: match.queueId,
 	};
 };
 

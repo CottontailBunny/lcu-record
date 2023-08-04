@@ -29,6 +29,34 @@ impl RESTClient {
         Ok(req)
     }
 
+    
+    pub async fn put(&self, endpoint: String, params:String) -> Result<serde_json::Value, reqwest::Error> {
+        println!("PARAMS{:?}",params);
+        let req: serde_json::Value = self
+            .reqwest_client
+            .put(format!("https://127.0.0.1:{}{}", self.port, endpoint))
+            .body(params)
+            .send()
+            .await?
+            .json()
+            .await?;
+        Ok(req)
+    }
+
+        
+    pub async fn post(&self, endpoint: String, params:String) -> Result<serde_json::Value, reqwest::Error> {
+        println!("PARAMS{:?}",params);
+        let req: serde_json::Value = self
+            .reqwest_client
+            .post(format!("https://127.0.0.1:{}{}", self.port, endpoint))
+            .body(params)
+            .send()
+            .await?
+            .json()
+            .await?;
+        Ok(req)
+    }
+
     pub async fn get_match_list(&self, endpoint: String) -> Result<MatchStruct, reqwest::Error> {
         let req:MatchStruct = self
             .reqwest_client

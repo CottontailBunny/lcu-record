@@ -27,7 +27,7 @@ interface SumReslut {
 	currentId: number;
 }
 
-interface ExcelChamp {
+export interface ExcelChamp {
 	champImgUrl: string;
 	champLevel: string;
 	championPoints: string;

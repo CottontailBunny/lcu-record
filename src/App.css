@@ -1,8 +1,10 @@
 html{
   margin: 0;
   display: flex;
-  align-items: center;
-  justify-content: center;
+  background-color: rgb(240, 240, 240);
+
+  width: 100%;
+
 }
 body{
  margin: 0;
@@ -10,4 +12,9 @@ body{
 #root{
   background-color: rgb(240, 240, 240);
   margin: 0px;
+  width: 100%;
+}
+.container{
+  padding: 12px 12px;
+
 }

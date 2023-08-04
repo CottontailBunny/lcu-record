@@ -1,6 +1,5 @@
 .record-list-container{
    position: relative;
-    width: 350px;
     background-color: #fff;
     border-radius: 12px;
     margin-top: 12px;
@@ -21,6 +20,12 @@
     }
     .ant-pagination{
         position: absolute;
+        white-space: nowrap;
+        .ant-pagination-item,.ant-pagination-item-ellipsis{
+           
+            min-height: 15px;
+            min-width: 15px;
+        }
         padding-top: 5px;
         bottom: 4px;
     }
@@ -37,10 +42,11 @@
     align-items: center;
     height: 50px;
     width: 100%;
-    background: linear-gradient(to right, #ffffff, #60c5ba);
+    background: linear-gradient(to right, #ffffff, rgb(205,237,233));
     margin-bottom: 8px;
     padding: 0 8px;
     box-sizing: border-box;
+    border-radius: 6px;
     .left-box{
         display: flex;
     }
@@ -71,5 +77,5 @@
     }
 }
 .fail{
-    background: linear-gradient(to right, #ffffff, #ff7473);
+    background: linear-gradient(to right, #ffffff, rgb(255,210,210));
 }

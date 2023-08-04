@@ -1,8 +1,7 @@
 use base64::{engine::general_purpose, Engine};
 use std::{error::Error, fmt, fmt::Display};
 use sysinfo::{ProcessExt, System, SystemExt};
-// use psutil::process::Process;
-// use psutil::net::get_proc_sockets;
+
 
 #[derive(Debug, Clone)]
 pub(crate) enum ProcessInfoError {

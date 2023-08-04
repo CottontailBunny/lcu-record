@@ -3,7 +3,6 @@
 	background-color: #fff;
 	height: 90px;
 	width: 100%;
-	margin-top: 15px;
 	border-radius: 12px;
 	padding: 8px 8px 0 8px;
 	box-sizing: border-box;
@@ -49,17 +48,5 @@
 			font-size: 14px;
 		}
 	}
-	.right-box {
-		position: absolute;
-		top: 10px;
-		right: 10px;
 
-		.tip-box {
-			background-color: #fff;
-			border: 1px solid #cadbe9;
-			border-radius: 12px;
-			padding: 8px 10px;
-			text-align: left;
-		}
-	}
 }

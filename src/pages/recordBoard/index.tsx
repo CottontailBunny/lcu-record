@@ -8,6 +8,8 @@ import { MatchList } from "../../interface/MatchInfo";
 import { Button, Form, Input, message } from "antd";
 import RecordList from "../recordList";
 import CurSummoner from "../curSummoner";
+import CurGame from "../curGame";
+
 export default function () {
 	const [messageApi, contextHolder] = message.useMessage();
 	const [matchList, setMatchList] = useState<MatchList[]>([]);
@@ -61,32 +63,38 @@ export default function () {
 		queryMatch(curSumInfo?.summonerInfo?.displayName);
 		setCurSummoner(curSumInfo);
 	};
+
 	return (
-		<div className='record-query-area'>
+		<div className='record-board'>
 			{contextHolder}
-			<CurSummoner info={curSummoner} />
-			<div className='queryMatch'>
-				<Form
-					name='basic'
-					labelCol={{ span: 4 }}
-					wrapperCol={{ span: 8 }}
-					style={{ maxWidth: 600 }}
-					onFinish={onFinish}
-					onFinishFailed={onFinishFailed}
-					autoComplete='off'>
-					<Form.Item
-						name='username'
-						rules={[{ required: true, message: "请输入召唤师id" }]}>
-						<Input placeholder='搜索召唤师' />
-					</Form.Item>
-					<Form.Item>
-						<Button type='primary' htmlType='submit'>
-							查询
-						</Button>
-					</Form.Item>
-				</Form>
+			<div className='left-area'>
+				<CurSummoner info={curSummoner} />
+				<div className='queryMatch'>
+					<Form
+						name='basic'
+						style={{ maxWidth: 600 }}
+						onFinish={onFinish}
+						onFinishFailed={onFinishFailed}
+						autoComplete='off'>
+						<Form.Item
+							name='username'
+							rules={[
+								{ required: true, message: "请输入召唤师id" },
+							]}>
+							<Input placeholder='搜索召唤师（本大区）' />
+						</Form.Item>
+						<Form.Item>
+							<Button type='primary' htmlType='submit'>
+								查询
+							</Button>
+						</Form.Item>
+					</Form>
+				</div>
+				<RecordList matchList={matchList} onPageChange={onPageChange} />
 			</div>
-			<RecordList matchList={matchList} onPageChange={onPageChange} />
+			<div className='right-area'>
+				<CurGame onSearch={queryMatch}></CurGame>
+			</div>
 		</div>
 	);
 }
